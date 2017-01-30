@@ -1,0 +1,29 @@
+{
+  "name": "glip-webhook-proxy",
+  "version": "0.0.1",
+  "description": "A webhook proxy for Glip (https://glip.com)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grokify/glip-webhook-proxy.git"
+  },
+  "keywords": [
+    "glip",
+    "webhook"
+  ],
+  "author": "John Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grokify/glip-webhook-proxy/issues"
+  },
+  "homepage": "https://github.com/grokify/glip-webhook-proxy#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.1",
+    "request": "^2.79.0 "
+  }
+}
