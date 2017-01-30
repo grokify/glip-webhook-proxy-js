@@ -56,5 +56,7 @@ app.post('/webhook/travisci/out/glip/:glipguid/?', function(req, res) {
   var options = { glipguid: req.params.glipguid, payload: payload};
   var travisci = new tc.Travisci_Normalizer();
   travisci.normalize(options, callback);
-  console.log("Finished Travis CI Webhook Request");
+  var note = 'Finished Travis CI Webhook Request';
+  console.log(note);
+  res.send(note);
 });
