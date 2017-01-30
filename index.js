@@ -7,7 +7,6 @@ var request = require('request');
 var bodyParser = require('body-parser')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-//var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 var useTls = process.env.MY_APP_TLS_ENABLED > 0 ? true : false;
 var server = null;
@@ -53,7 +52,7 @@ var tc = require('./normalizer_travisci.js');
 
 app.post('/webhook/travisci/out/glip/:glipguid/?', function(req, res) {
   var payload = JSON.parse(req.body.payload);
-  var options = { glipguid: req.params.glipguid, payload: payload};
+  var options = { glipguid: req.params.glipguid, payload: payload };
   var travisci = new tc.Travisci_Normalizer();
   travisci.normalize(options, callback);
   var note = 'Finished Travis CI Webhook Request';
